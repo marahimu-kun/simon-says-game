@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+/* Button Container */
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 20px;
+}
+
+/* Buttons */
+.btn {
+  height: 150px;
+  width: 150px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.red {
+  background: linear-gradient(135deg, #ff6b6b, #ff4757);
+}
+
+.blue {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+}
+
+.pink {
+  background: linear-gradient(135deg, #ff9ff3, #f368e0);
+}
+
+.yellow {
+  background: linear-gradient(135deg, #f9ca24, #f0932b);
+}
+
+/* Animations */
+.flash {
+  background: white !important;
+}
+
+.userFlash {
+  background: rgb(119, 198, 0) !important;
+}
+
+/* Game Over Animation */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25%,
+  75% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+.game-over {
+  animation: shake 0.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .btn {
+    height: 100px;
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
